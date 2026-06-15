@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản lý Sản phẩm - Lab6</title>
+    <style>
+        body { font-family: sans-serif; margin: 20px; }
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+        th { background-color: #f2f2f2; }
+        .form-group { margin-bottom: 10px; }
+        button { padding: 5px 10px; cursor: pointer; }
+    </style>
+</head>
+<body>
+
+    <h2>Danh sách Sản phẩm</h2>
+    
+    <div style="margin-bottom: 20px; padding: 15px; border: 1px solid #ccc;">
+        <h3>Thêm / Sửa Sản Phẩm</h3>
+        <input type="hidden" id="productId" value="">
+        <div class="form-group">
+            <label>Tên sản phẩm:</label>
+            <input type="text" id="productName" required>
+        </div>
+        <div class="form-group">
+            <label>Giá:</label>
+            <input type="number" id="productPrice" required>
+        </div>
+        <div class="form-group">
+            <label>Mô tả:</label>
+            <input type="text" id="productDescription">
+        </div>
+        <button id="btnSave">Lưu Sản Phẩm</button>
+        <button id="btnClear" onclick="clearForm()">Làm Mới Form</button>
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Tên sản phẩm</th>
+                <th>Giá</th>
+                <th>Mô tả</th>
+                <th>Thao tác</th>
+            </tr>
+        </thead>
+        <tbody id="bookList">
+            <!-- Dữ liệu sẽ được load ở đây -->
+        </tbody>
+    </table>
+
+    <script src="main.js"></script>
+</body>
+</html>
